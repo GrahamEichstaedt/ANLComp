@@ -24,7 +24,6 @@ if __name__ == '__main__':
     
     while(running):
         bot.requestLineFollower(1, 2, on_line_follower)
-        time.sleep(0.25)
     # ROBOT STARTED
     # Loop
     # if lightSensor == 0
@@ -37,7 +36,7 @@ if __name__ == '__main__':
 
 
 
-
+# LIGHT SENSOR EXAMPLE
 # def onLight(value):
 # 	print "light = ",value
 	
@@ -49,7 +48,7 @@ if __name__ == '__main__':
 # 		bot.requestLightOnBoard(1,onLight)
 # 		sleep(0.5)
 
-
+# LINE FOLLOWER EXAMPLE
 # def onLineFollower(value):
 # 	print "status = ",value
 	
@@ -61,7 +60,7 @@ if __name__ == '__main__':
 # 		bot.requestLineFollower(1,2,onLineFollower)
 # 		sleep(0.5)
 
-
+# MOTOR CONTROLLER EXAMPLE
 # bot = mBot()
 # #bot.startWithSerial("/dev/ttyUSB0")
 # bot.startWithHID()
