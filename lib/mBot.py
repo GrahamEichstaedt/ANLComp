@@ -249,7 +249,7 @@ class mBot():
 		l = self.buffer[position]
 		position+=1
 		s = ""
-		for i in Range(l):
+		for i in range(i):
 			s += self.buffer[position+i].charAt(0)
 		return s
 	def readDouble(self, position):
