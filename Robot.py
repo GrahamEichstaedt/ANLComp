@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # ROBOT STARTED
     # Loop
     # if lightSensor == 0
-        if(bot)
+        
     # If lightSensor == 1
     
     # if lightSensor == 2
