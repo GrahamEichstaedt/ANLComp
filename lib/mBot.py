@@ -10,7 +10,7 @@ import hid
 class mSerial():
 	ser = None
 	def __init__(self):
-		print self
+		print(self)
 
 	def start(self, port):
 		self.ser = serial.Serial(port,115200)
@@ -53,7 +53,7 @@ class mSerial():
 		
 class mHID():
 	def __init__(self):
-		print self;
+		print(self);
 		
 	def start(self):
 		
@@ -62,15 +62,15 @@ class mHID():
 		self.dict.device = hid.device()
 		self.dict.device.open(0x0416, 0xffff)
 		#self.dict.device.hid_set_nonblocking(self.device,1)
-		print "start"
+		print("start")
 		self.buffer = []
 		self.bufferIndex = 0
 	
 	def enumerate(self):
-		print "enumerate"
+		print("enumerate")
 		for dev in self.dict.device.enumerate():
-			print '------------------------------------------------------------'
-			print dev.description()
+			print ('------------------------------------------------------------')
+			print (dev.description())
 
 	def writePackage(self,package):
 		buf = []
@@ -103,7 +103,7 @@ class mHID():
 		
 class mBot():
 	def __init__(self):
-		print "init mBot"
+		print("init mBot")
 		signal.signal(signal.SIGINT, self.exit)
 		self.manager = Manager()
 		self.__selectors = self.manager.dict()
@@ -152,7 +152,7 @@ class mBot():
 				else:	
 					sleep(0.5)
 			except Exception as ex:
-				print str(ex);
+				print(str(ex));
 				self.close();
 				sleep(1)
 				
