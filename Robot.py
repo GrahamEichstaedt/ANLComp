@@ -2,9 +2,23 @@
 from lib.mBot import mBot
 import time
 
+def lost_path():
+    print("Robot has lost the path. Attempting to find path...")
 
+"""
+Main movement algorithm
+
+"""  
 def on_line_follower(value):
     print("status = ", value)
+    if(value == 3): 
+        bot.doMove(100, 100)
+    elif(value == 2):
+        bot.doMove(0, 100)
+    elif(value == 1):
+        bot.doMove(100, 0)
+    else:
+        bot.doMove(-100, -100)
     
 def on_light(value):
     print("Light = ", value)
