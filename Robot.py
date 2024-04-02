@@ -12,16 +12,21 @@ Main movement algorithm
 def on_line_follower(value):
     print("status = ", value)
     if(value == 3): 
-        bot.doMove(100, 100)
+        bot.doMove(100, 100)    # forward - full speed
     elif(value == 2):
-        bot.doMove(0, 100)
+        bot.doMove(0, 100)      # left turn - right motor full speed left motor stop
     elif(value == 1):
-        bot.doMove(100, 0)
+        bot.doMove(100, 0)      # right turn - right motor stop left motor full speed
     else:
-        bot.doMove(-100, -100)
+        bot.doMove(-50, -50)  # reverse - half speed
     
 def on_light(value):
     print("Light = ", value)
+
+
+
+def on_color(value):
+
 
 
 
